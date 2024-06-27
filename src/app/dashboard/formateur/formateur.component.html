@@ -1,0 +1,148 @@
+
+
+<div class="container mb-5">
+
+
+
+<table>
+
+    
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center mb-3">Liste des formations          <button class="btn ajouter  float-right px-3 mb-4  text-muted" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">  Ajouter  </button> 
+        </h2>
+
+
+        <div class="row">
+
+
+            
+              <div class="col mb-4">
+              </div>
+           </div>
+        <div class="card">
+          <div class="table-responsive pt-3">
+            <table class="table table-striped project-orders-table w-50">
+              <thead>
+                <tr>
+                
+                  <th>Nom</th>
+                  <th>Prénom</th>
+              
+                  <th>Email</th>
+                  <th>téléphone</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of formateurs ">
+                  <td>{{ item.name}}</td>
+                  <td>{{ item.lastname }}</td>
+            
+                  <td>{{ item.email}}</td>
+                  <td>{{ item.telephone}}</td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                <button class="btn btn-info float-right px-3 me-2 text-muted" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo"  (click)="afficher(item)">  modifier  </button> 
+
+                      <button
+                      type="button"
+                      class="btn btn-danger  btn-icon-text mr-3"  (click)="delete(item._id)"
+                    
+                    >
+                     Delete 
+                    
+                    </button>
+                     
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </table>
+  
+
+  <div>
+
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter formateur</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label" >Nom:</label>
+            <input type="text" class="form-control" id="recipient-name" name="nom" [(ngModel)]="formateur.name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Prenom:</label>
+            <input class="form-control" id="message-text" name="prenom"  [(ngModel)]="formateur.lastname">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label" >Email:</label>
+            <input class="form-control" id="message-text" [(ngModel)]="formateur.email" name="email">
+          </div>
+     
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label" >Téléphone:</label>
+            <input class="form-control" id="message-text" [(ngModel)]="formateur.telephone" name="telephone">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"  (click)="ajouter()">Ajouter</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODIFIER formateur -->
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">modifier formateur</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label" >Nom:</label>
+            <input type="text" class="form-control" id="recipient-name" name="nom" [(ngModel)]="formateur1.name" >
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Prenom:</label>
+            <input class="form-control" id="message-text" name="prenom"  [(ngModel)]="formateur1.lastname">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label" >Email:</label>
+            <input class="form-control" id="message-text"  name="mail" [(ngModel)]="formateur1.email">
+          </div>
+     
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label" >Téléphone:</label>
+            <input class="form-control" id="message-text" name="telephone" [(ngModel)]="formateur1.telephone">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"  (click)="update()">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>

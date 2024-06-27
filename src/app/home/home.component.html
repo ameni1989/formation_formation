@@ -1,0 +1,35 @@
+
+
+<div class="container mb-5">
+    <app-header3></app-header3>
+
+</div>
+
+<div class="container pt-5 ">
+    <h2 class="text-center pt-3 pb-2">Avec TechLearn Continu, Decrochez Le Job De Vos Réves! </h2>
+    <div class="row bloc mt-4">
+  <div class="col-6">
+   <h1>Formez-vous aux métiers de demain !</h1>
+  </div>
+
+  <div class="col-6">
+    <P>Choisissez l'un de nos programmes de formation élaborés par des experts du secteur et en collaboration avec nos entreprises partenaires. Préparez-vous pour le monde professionnel en travaillant sur des projets réels.
+    </P>
+    <button class="btn_home">Inscription au formation<i class="bi bi-caret-right-fill"></i>
+    </button>
+  </div>
+    </div>
+<h2 class=" title mt-4 text-center pt-5">NOS FORMATIONS</h2>
+    <div class="row row_formation mt-5 ">
+  <div class="col-3 d-flex justify-content-center mb-3" *ngFor="let item of formations">
+        <div class="card" style="width: 18rem;">
+            <img [src]="'http://127.0.0.1:3000/getimage/' + item.image" width=200 height="180" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{item.nom}}</h5>
+              <p class="card-text">{{item.statut}}</p>
+              <button class="btn" (click)="detail(item)">Details formation</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

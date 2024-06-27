@@ -1,0 +1,38 @@
+
+
+<div class="container principale">
+<div class="row  mb-3">
+    <h3 class="text-center">Détail Formation</h3>
+    <div class="col-6 mt-3">
+<p><B>Nom de la formation :</B> {{detail.nom}}</p>
+<p><B>Date de formation :</B>  {{detail.description}}</p>
+
+<p><B>Statut :</B>  {{detail.statut}}</p>
+<p><B>Nom de formateur :</B>  {{detail.formateur[0].name}} {{detail.formateur[0].lastname}}</p>
+<p><B>Compétences :</B>  {{detail.formateur[0].competence}}</p>
+<button class="btn btn-danger mt-3" (click)="inscrire(detail)" *ngIf="etudiant" >S'inscrire à la formation</button>
+<button class="btn btn-warning mt-3"  *ngIf="detail.attente">Demande en attente</button>
+
+</div>
+
+
+
+<div class="col-6 mt-2">
+    <img [src]="'http://127.0.0.1:3000/getimage/'+detail.image" alt="" width="400" height="300">
+
+
+</div>
+<div class="row">
+
+    <div class="col-4">
+       
+    <div class="col-4">
+        
+        
+    </div>
+    <div class="col-4">
+        
+    </div>
+</div>
+</div>
+</div>

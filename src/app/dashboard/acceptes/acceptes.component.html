@@ -1,0 +1,50 @@
+
+<div class="container mb-5">
+
+    <table>
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center mb-3">Demandes acceptées</h2>
+      
+            <div class="card">
+              <div class="table-responsive pt-3">
+                <table class="table table-striped project-orders-table w-50">
+                  <thead>
+                    <tr>
+                    
+                      <th>Nom</th>
+                      <th>Prénom</th>
+                      <th>Formation</th>
+                      <th>Date d'inscription</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of acceptes  ">
+                      <td >{{item.utilisateur[0].name}}</td>
+                      <td>{{item.utilisateur[0].lastname}}</td>  
+                   
+                      <td>{{item.formation[0].nom}}</td>  
+                      <td>{{item.data_inscription}}</td>     
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <button
+                            type="button"
+                            class="btn btn-success btn-sm btn-icon-text mr-3"  [routerLink]="['/admin/repondre',item._id]"
+                          
+                          >
+                          Annuler l'inscription
+                          
+                          </button>
+                         
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </table>
+      

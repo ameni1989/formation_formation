@@ -1,0 +1,53 @@
+
+
+<div class="container mb-5">
+  
+
+</div>
+
+<table>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center mb-3">Liste des Formations acceptés</h2>
+  
+        <div class="card">
+          <div class="table-responsive pt-3">
+            <table class="table table-striped project-orders-table w-50">
+              <thead>
+                <tr>
+                
+                  <th>Nom</th>
+                  <th>Description</th>
+                  <th>Date inscription</th>
+             
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of inscris ">
+                  <td>{{ item.formation[0].nom }}</td>
+                  <td>{{ item.formation[0].description }}</td>
+                  <td>{{ item.data_inscription }}</td>
+                 
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <button
+                        type="button"
+                        class="btn btn-success btn-sm btn-icon-text mr-3" [routerLink]="['/etudiant/detail',item.formation[0]._id]"
+                      
+                      >
+                       Detais formation
+                      
+                      </button>
+                     
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </table>
+  

@@ -1,0 +1,57 @@
+
+
+<div class="container mb-5">
+
+
+
+<table>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center mb-3">Messages réçus</h2>
+  
+        <div class="card">
+          <div class="table-responsive pt-3">
+            <table class="table table-striped project-orders-table w-50">
+              <thead>
+                <tr>
+                
+                  <th>Nom</th>
+                  <th>Prénom</th>
+                  <th>Contenu</th>
+                  <th>Date d'envoi</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of msgs  ">
+                  <td >{{item.expediteur[0].name}}</td>
+                  <td>{{item.expediteur[0].lastname}}</td>  
+                  <td >{{item.message | truncate :40}}</td> 
+                             
+                 
+                  <td>{{item.date}}</td>     
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <button
+                        type="button"
+                        class="btn btn-success btn-sm btn-icon-text mr-3"  (click)="test()" [routerLink]="['/admin/repondre',item._id]"
+                      
+                      >
+                       Voir message
+                      
+                      </button>
+                     
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </table>
+
+  
+  
+  </div>

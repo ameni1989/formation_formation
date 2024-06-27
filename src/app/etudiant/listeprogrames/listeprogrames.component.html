@@ -1,0 +1,59 @@
+
+
+<div class="container mb-5">
+
+</div>
+
+<table>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center mb-3">Liste des Formations programmés</h2>
+  
+        <div class="card">
+          <div class="table-responsive pt-3">
+            <table class="table table-striped project-orders-table w-50">
+              <thead>
+                <tr>
+                
+                  <th>Nom</th>
+                  <th>Description</th>
+                  <th>Statut</th>
+             
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of formations ">
+                  <td>{{ item.nom }}</td>
+                  <td>{{ item.description }}</td>
+                  <td>{{ item.statut }}</td>
+                 
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <button
+                        type="button"
+                        class="btn btn-success btn-sm btn-icon-text mr-3"
+                       [routerLink]="['/etudiant/detail',item._id]"
+                      >
+                       Detais 
+                      
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-sm btn-icon-text" 
+                        
+                      >
+                        S'inscrire à la formation
+                      
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </table>
+  

@@ -1,0 +1,81 @@
+<!-- <div class="container">
+  <div class="m-auto">
+    <h3 class="mt-3">Sélection de marques de voitures</h3>
+    <div>
+      <select [(ngModel)]="selectedBrand1" size="1" class="form-select">
+        <option value="">Sélectionnez</option>
+        <option *ngFor="let brand of niveau1" [value]="brand">
+          {{ brand }}
+        </option>
+      </select>
+
+      <select
+        *ngIf="selectedBrand1"
+        [(ngModel)]="selectedBrand2"
+        class="form-select ms-2"
+      >
+        <option value="">Sélectionnez</option>
+        <option *ngFor="let model of niveau2[selectedBrand1]" [value]="model">
+          {{ model }}
+        </option>
+      </select>
+
+      <select
+        *ngIf="selectedBrand2"
+        size="1"
+        [(ngModel)]="selectedBrand3"
+        class="form-select ms-2"
+      >
+        <option value="">Sélectionnez</option>
+        <option
+          *ngFor="let variant of niveau3[selectedBrand2]"
+          [value]="variant"
+        >
+          {{ variant }}
+        </option>
+      </select>
+    </div>
+    <button (click)="envoyer()" class="btn btn-info mt-2">Envoyer</button>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="m-auto">
+    <h3 class="mt-3">Sélection de marques de voitures</h3>
+    <div>
+      <select [(ngModel)]="selectedBrand1" size="1" class="form-select">
+        <option value="">Sélectionnez</option>
+        <option *ngFor="let brand of niveau1" [value]="brand">
+          {{ brand }}
+        </option>
+      </select>
+
+      <select
+        *ngIf="selectedBrand1"
+        [(ngModel)]="selectedBrand2"
+        class="form-select ms-2"
+      >
+        <option value="">Sélectionnez</option>
+        <option *ngFor="let model of niveau2[selectedBrand1]" [value]="model">
+          {{ model }}
+        </option>
+      </select>
+
+      <select
+        *ngIf="selectedBrand2"
+        size="1"
+        [(ngModel)]="selectedBrand3"
+        class="form-select ms-2"
+      >
+        <option value="">Sélectionnez</option>
+        <option
+          *ngFor="let variant of niveau3[selectedBrand2]"
+          [value]="variant"
+        >
+          {{ variant }}
+        </option>
+      </select>
+    </div>
+    <button (click)="envoyer()" class="btn btn-info mt-2">Envoyer</button>
+  </div>
+</div>

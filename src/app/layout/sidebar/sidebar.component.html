@@ -1,0 +1,147 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">
+        <i class="typcn typcn-device-desktop menu-icon"></i>
+        <span class="menu-title">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-toggle="collapse"
+        href="#ui-basic"
+        aria-expanded="false"
+        aria-controls="ui-basic"
+      >
+        <i class="typcn typcn-document-text menu-icon"></i>
+        <span class="menu-title" routerLink="/dashboard/gestionclients/list"
+          >Formations</span
+        >
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="ui-basic">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard/gestionclients/ajout"
+              >Ajouter formation</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard/gestionclients/list"
+              >Liste formations</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard/gestionclients/modifier"
+              >Modifier formation</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-toggle="collapse"
+        href="#form-elements"
+        aria-expanded="false"
+        aria-controls="form-elements"
+      >
+        <i class="typcn typcn-film menu-icon"></i>
+        <span class="menu-title" routerLink="/dashboard/gestioncomptes/list"
+          >Formateurs</span
+        >
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="form-elements">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard/gestioncomptes/ajout"
+              >Ajouter formateur</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard/gestioncomptes/list"
+              >Liste formateurs</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard/gestioncomptes/modifier"
+              >Modifier formateur</a
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-toggle="collapse"
+        href="#charts"
+        aria-expanded="false"
+        aria-controls="charts"
+      >
+        <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+        <span class="menu-title">Inscriptions</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="charts">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin/attente"
+              >Demandes en attente</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin/acceptes"
+              >Demandes acceptées</a
+            >
+          </li>
+       
+         
+        </ul>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-toggle="collapse"
+        href="#charts"
+        aria-expanded="false"
+        aria-controls="charts"
+      >
+        <i class="typcn typcn-chart-pie-outline menu-icon"></i>
+        <span class="menu-title">Messages</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="charts">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin/msgrecu"
+              >Messages réçus 
+              <span class="position-relative">
+                
+                <span class="badge bg-danger rounded-circle position-absolute top-0 start-100 translate-middle">
+                  {{_admin.notifications.nonlus}}
+                </span>
+              </span>
+              
+              </a>
+             
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin/msgenv"
+              >Messages envoyés</a
+            >
+          </li>
+       
+         
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>

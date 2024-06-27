@@ -1,0 +1,72 @@
+<nav class="sidebar sidebar-offcanvas p-0" id="sidebar">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="typcn typcn-device-desktop menu-icon"></i>
+          <span class="menu-title">Espace Etudiant</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          data-toggle="collapse"
+          href="#ui-basic"
+          aria-expanded="false"
+          aria-controls="ui-basic"
+        >
+          <i class="typcn typcn-document-text menu-icon"></i>
+          <span class="menu-title" routerLink="/dashboard/gestionclients/list"
+            >Formations</span
+          >
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-basic">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/etudiant/formations"
+                >Listes des formations</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/etudiant/inscris"
+                >Formations inscrites</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/etudiant/programes"
+                >Formations programmés</a
+              >
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          data-toggle="collapse"
+          href="#form-elements"
+          aria-expanded="false"
+          aria-controls="form-elements"
+        >
+          <i class="typcn typcn-film menu-icon"></i>
+          <span class="menu-title" routerLink="/dashboard/gestioncomptes/list"
+            >Contact us</span
+          >
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="form-elements">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/etudiant/envoyermsg"
+                >Envoyer message</a
+              >
+            </li>
+          
+          </ul>
+        </div>
+      </li>
+  
+   
+    </ul>
+  </nav>
+  

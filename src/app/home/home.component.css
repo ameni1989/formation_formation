@@ -1,0 +1,44 @@
+.card{
+    border:1px solid gray;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;}.btn{
+    background-color: rgb(132,79,193);
+    color:white;
+
+}
+.bloc{
+    width: auto;
+    height: 100%;
+    background-color: #00c8bf;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.bloc h1{  
+    color:white;
+    font-size: 35px;
+}
+.bloc p{
+    line-height: 1.5;
+    color:white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.btn_home{
+    background-color: blueviolet;
+    color:white;
+    float: right;
+    padding: 15px 30px;
+    border:none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+ i{
+  margin-left: 10px;
+  color:white;
+
+ 
+}
+.row_formation{
+
+    flex-wrap: wrap;
+}

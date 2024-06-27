@@ -1,0 +1,7 @@
+
+
+.sidebar .nav.sub-menu .nav-item::before {
+    display: none;
+    margin-left: 10px;
+  }
+  

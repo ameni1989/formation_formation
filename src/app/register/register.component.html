@@ -1,0 +1,67 @@
+<app-header3></app-header3>
+<div class="container mt-5">
+  <div class="row mt-5 pt-5">
+    <div class="col-5 m-auto">
+      <div class="card mt-4 p-3">
+        <h3 class="text-center">Register here</h3>
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="you fullname"
+            [(ngModel)]="user.name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Lastname</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="you lastname"
+            [(ngModel)]="user.lastname"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="name@example.com"
+            [(ngModel)]="user.email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Téléphone</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="you phone number"
+            [(ngModel)]="user.telephone"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Password</label
+          >
+          <input
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            placeholder="your password"
+            [(ngModel)]="user.password"
+          />
+        </div>
+        
+        <button class="btn  w-100" (click)="signup()">Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
